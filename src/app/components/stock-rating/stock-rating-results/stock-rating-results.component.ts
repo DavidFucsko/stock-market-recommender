@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { StockSearchResult } from 'src/app/models/stock-search-results.model';
 
 @Component({
   selector: 'app-stock-rating-results',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock-rating-results.component.scss']
 })
 export class StockRatingResultsComponent implements OnInit {
+
+  @Input()
+  stockSearchResults: StockSearchResult;
 
   constructor() { }
 

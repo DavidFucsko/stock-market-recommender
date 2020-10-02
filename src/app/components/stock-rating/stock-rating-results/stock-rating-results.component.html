@@ -1,1 +1,8 @@
-<p>stock-rating-results works!</p>
+<ng-container *ngIf="!!stockSearchResults">
+    <ng-container *ngFor="let stockPrice of stockSearchResults.stockPrices; let i = index">
+        <p>{{stockPrice}}</p>
+        <p>{{stockSearchResults.dayOfTrades[i] | date}}</p>
+        <p>{{stockSearchResults.cumulatedSocialMediaCounts[i]}}</p>
+        <p>{{stockSearchResults.stockRatings[i]}}</p>
+    </ng-container>
+</ng-container>

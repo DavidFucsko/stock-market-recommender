@@ -1,2 +1,51 @@
-<p>stock-selector works!</p>
-<app-algorithm-picker></app-algorithm-picker>
+<div class="stock-selector">
+    <form [formGroup]="stockSelectorForm" (ngSubmit)="searchStocks()" class="form">
+        <label>
+            Stock symbol:
+            <input
+                type="text"
+                id="stockSymbol"
+                formControlName="stockSymbol">
+        </label>
+        <label>
+            From Date:
+            <input
+                type="date"
+                id="fromDate"
+                formControlName="fromDate">
+        </label>
+        <label>
+            To Date:
+            <input
+                type="date"
+                id="toDate"
+                formControlName="toDate">
+        </label>
+        <label>
+            Facebook:
+            <input
+                type="checkbox"
+                id="facebook"
+                formControlName="facebook" (change)="socialMediaFilterChanged()">
+        </label>
+        <label>
+            Twitter:
+            <input
+                type="checkbox"
+                id="twitter"
+                formControlName="twitter" (change)="socialMediaFilterChanged()">
+        </label>
+        <label>
+            Instagram:
+            <input
+                type="checkbox"
+                id="instagram"
+                formControlName="instagram" (change)="socialMediaFilterChanged()">
+        </label>
+        <div class="form-buttons">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+    <app-algorithm-picker (algorithmChanged)="algorithmChanged($event)">
+    </app-algorithm-picker>
+</div>

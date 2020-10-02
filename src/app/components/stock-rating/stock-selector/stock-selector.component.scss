@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+
+input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid $light-grey;
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.form-buttons {
+    text-align: end;
+}
+
+.stock-selector {
+    @include normal-box-shadow($dark-grey);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    min-height: 15rem;
+    background-color: $white;
+}
