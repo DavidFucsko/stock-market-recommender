@@ -1,0 +1,12 @@
+<p>Pick an algorithm: </p>
+<div class="algorithm-picker" #container>
+    <app-tabs (tabSelected)="algorithmSelected($event)">
+        <ng-container *appTabMarker="{markerName: 'Naive', referenceName: 'naive'}">
+        </ng-container>
+        <ng-container *appTabMarker="{markerName: 'Advanced', referenceName: 'advanced'}">
+            <p>Constant parameter:</p>
+            <input #advanced type="text"
+                id="advancedConstant" (input)="inputChanged($event)">
+        </ng-container>
+    </app-tabs>
+</div>
