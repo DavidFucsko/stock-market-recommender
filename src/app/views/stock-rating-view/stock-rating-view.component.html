@@ -1,4 +1,3 @@
-<p>stock-rating-view works!</p>
-<app-stock-selector>
+<app-stock-selector (selectedStock)="searchStock($event)" (socialSelectorChanged)="socialSelectorChanged($event)">
 </app-stock-selector>
-<app-stock-rating-results></app-stock-rating-results>
+<app-stock-rating-results [stockSearchResults]="stockSearchResults$ | async"></app-stock-rating-results>

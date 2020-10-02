@@ -7,16 +7,8 @@ import { environment } from 'src/environments/environment';
   templateUrl: './stocks-page.component.html',
   styleUrls: ['./stocks-page.component.scss']
 })
-export class StocksPageComponent implements OnInit {
+export class StocksPageComponent {
 
-  constructor(private httpClient: HttpClient) { }
-
-  ngOnInit(): void {
-    this.httpClient.get(`${environment.backendUrl}${environment.backendEndpoints[0]}`).subscribe(console.log);
-    this.httpClient.get(`${environment.backendUrl}${environment.backendEndpoints[1]}`).subscribe(console.log);
-    this.httpClient.get(`${environment.backendUrl}hello-world`).subscribe(console.log);
-    this.httpClient.get(`${environment.backendUrl}fake-url`).subscribe(console.log);
-    this.httpClient.get(`${environment.backendUrl}stockPriceGenerator`).subscribe(console.log);
-  }
+  constructor() { }
 
 }
