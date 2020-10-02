@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlgorithmPickerComponent } from './algorithm-picker/algorithm-picker.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
 @NgModule({
-  declarations: [AlgorithmPickerComponent],
+  declarations: [TabsComponent],
   imports: [
     CommonModule
   ],
-  exports: [AlgorithmPickerComponent]
+  exports: [TabsComponent]
 })
 export class SharedComponentsModule { }
