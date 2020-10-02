@@ -1,0 +1,35 @@
+body,
+input {
+    font-size: $normal-font;
+    letter-spacing: 0.1rem;
+    font-family: arial, sans-serif-light, sans-serif;
+}
+
+.tab-label {
+    font-size: $small-font;
+    text-transform: uppercase;
+    color: $dark-grey;
+}
+
+.form {
+    button {
+        font-size: $small-font;
+        letter-spacing: 0.1rem;
+        color: $dark-grey;
+    }
+
+    label,
+    input {
+        font-size: $small-font;
+        color: $dark-grey
+    }
+
+}
+
+nav {
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: $small-font;
+    }
+}
