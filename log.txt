@@ -1,0 +1,97 @@
+commit 45ecab1f626ae0cc52e6e5a015a4701beea58b70
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 14:01:04 2020 +0200
+
+    Add algorithm and stock name to results
+
+commit 3eab8b423138386f8f0fac9e57edc97816a2a406
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 13:50:53 2020 +0200
+
+    Add chart component
+
+commit 1f57f424ddc83df180ee3490bd8cb7212759beb2
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 12:44:04 2020 +0200
+
+    Source format and minor bug fixing in mock backend service
+
+commit acbefd215aee4a063062d34c5e43abfe7880d206
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 12:07:04 2020 +0200
+
+    Add unit test for business logics
+
+commit d1c20e22972f63a6f2ebe1f6b288f7c152e56528
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 10:43:59 2020 +0200
+
+    Setup test environment
+
+commit 6f7e535a80ee2781d94161f13ce5b590601117bd
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 10:43:45 2020 +0200
+
+    Add social media post view feature
+
+commit f43242a4fc30bd6efa4c6399ff06a034c3bdd230
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 10:43:24 2020 +0200
+
+    Add abstract data card component
+
+commit 27ef0a48c97f29b857177f67ec23b63335cc4d02
+Author: DavidFucsko <42489885+DavidFucsko@users.noreply.github.com>
+Date:   Sat Oct 3 10:42:38 2020 +0200
+
+    Design for result display
+
+commit 90e907fda158c94f5c22a45459eeed547bed5b7b
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Sat Oct 3 07:43:22 2020 +0200
+
+    Base design for data display
+
+commit e50d6205a680463157a96b5a8ca1122e7a9e4e6a
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:56:49 2020 +0200
+
+    Add algorithm picker component
+
+commit e5f14a7c8b951e79f0a6c7ca269234fa8faad918
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:56:31 2020 +0200
+
+    Add stock rating selector and results component
+
+commit c3947cefe5e30a9dbf342d1ef5de624b4b8fc95b
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:55:46 2020 +0200
+
+    Add stock-rating-page and view
+
+commit 446515dcad104e9e7e6166884e7e9d136556da08
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:55:02 2020 +0200
+
+    Add models
+
+commit 7c93718bc34ecb484df291c693a90a885639d89b
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:54:26 2020 +0200
+
+    Add abstract components
+    
+    Add abstract tabs component; marker directive;
+
+commit 5539e1899b0a83c3d7b8264e7d4dc918b7841da0
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 19:53:00 2020 +0200
+
+    Add backend functionality
+
+commit fdc3b0f883827b12d72ef67ef3680a3622de9701
+Author: DavidFucsko <szocsyke2@gmail.com>
+Date:   Fri Oct 2 09:16:09 2020 +0200
+
+    Base architecture

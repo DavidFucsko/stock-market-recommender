@@ -108,7 +108,9 @@ describe('StockRatingService', () => {
         cumulatedSocialMediaCounts: [0],
         dayOfTrades: [new Date()],
         stockRatings: [1],
-        socialMediaCounts: [new SocialMediaCount()]
+        socialMediaCounts: [new SocialMediaCount()],
+        stockName: '',
+        algorithm: 'naive'
       };
       const dummyRecommendationResponse = [
         1
@@ -154,7 +156,7 @@ describe('StockRatingService', () => {
         dayOfTrades: [new Date()],
         stockRatings: [1],
         socialMediaCounts: [new SocialMediaCount()],
-        algorithm: '',
+        algorithm: 'naive',
         stockName: ''
       };
       const dummyResponse = [
