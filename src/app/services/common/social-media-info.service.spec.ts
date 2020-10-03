@@ -1,9 +1,9 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { SocialMediaPost } from 'src/app/models/social-media-post.model';
-
 import { SocialMediaInfoService } from './social-media-info.service';
 
 describe('SocialMediaInfoService', () => {

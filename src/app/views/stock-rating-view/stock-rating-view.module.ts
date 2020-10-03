@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { StockRatingViewComponent } from './stock-rating-view.component';
 import { StockRatingResultsComponent } from '../../components/stock-rating/stock-rating-results/stock-rating-results.component';
 import { StockSelectorComponent } from '../../components/stock-rating/stock-selector/stock-selector.component';

@@ -1,7 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { forkJoin, Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
+
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { SocialMediaPost } from 'src/app/models/social-media-post.model';
 import { environment } from 'src/environments/environment';

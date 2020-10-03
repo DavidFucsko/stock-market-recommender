@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { StocksPageComponent } from './stocks-page.component';
 import { StocksPageRoutingModule } from './stocks-page-routing.module';
 import { SocialMediaPostsViewModule } from '../../views/social-media-posts-view/social-media-posts-view.module';

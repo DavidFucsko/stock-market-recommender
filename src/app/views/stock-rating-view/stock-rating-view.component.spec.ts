@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { SocialMediaInfoService } from 'src/app/services/common/social-media-info.service';
 import { StockRatingService } from 'src/app/services/stock-rating/stock-rating.service';
-
 import { StockRatingViewComponent } from './stock-rating-view.component';
 
 describe('StockRatingViewComponent', () => {

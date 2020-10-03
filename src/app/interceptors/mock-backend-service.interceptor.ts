@@ -131,7 +131,7 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
     recommendationAlgorithm(stockPrices: number[], socialMediaCounts: number[], algorithmToUse: string, ...additionalParams): number[] {
         let result: number[] = [];
         result = stockPrices.map((stockPrice, index) => {
-            return this.algorithmMap.get(algorithmToUse).call(this, stockPrice, socialMediaCounts[index], additionalParams[index]);
+            return this.algorithmMap.get(algorithmToUse).call(this, stockPrice, socialMediaCounts[index], additionalParams);
         });
         return result;
     }
@@ -149,12 +149,15 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
     }
 
     private naiveAlgorithm(stockPrice: number, socialMediaCount: number): number {
-        // if stock price higher than social media count per 1000 we recommend sell, if equal we recommend hold,
+        // if stock price higher than social media count per 30 we recommend sell, if equal we recommend hold,
         // else buy it
-        return stockPrice > socialMediaCount / 1000 ? 2 : stockPrice === socialMediaCount / 1000 ? 1 : 0;
+        return stockPrice > socialMediaCount / 30 ? 2 :
+            (stockPrice <= socialMediaCount / 30 && stockPrice > socialMediaCount / 100) ? 1 : 0;
     }
 
     private advancedAlgorithm(stockPrice: number, socialMediaCount: number, constantFactor: number): number {
-        return stockPrice * constantFactor > socialMediaCount ? 2 : stockPrice * constantFactor === socialMediaCount ? 1 : 0;
+        return stockPrice > socialMediaCount / (30 / constantFactor) ? 2 :
+            (stockPrice <= socialMediaCount / (30 / constantFactor) && stockPrice > socialMediaCount / (100 / constantFactor)) ? 1 :
+                0;
     }
 }

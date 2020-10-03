@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+
 import { SocialMediaPost } from 'src/app/models/social-media-post.model';
 import { SocialMediaInfoService } from 'src/app/services/common/social-media-info.service';
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SocialMediaInfoService } from 'src/app/services/common/social-media-info.service';
 
+import { SocialMediaInfoService } from 'src/app/services/common/social-media-info.service';
 import { SocialMediaPostsViewComponent } from './social-media-posts-view.component';
 
 describe('SocialMediaPostsComponent', () => {

@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
 import { StockRatingService } from './stock-rating.service';
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { StockPriceModel } from 'src/app/models/stock-price.model';

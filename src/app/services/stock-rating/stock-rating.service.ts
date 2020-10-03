@@ -1,7 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { forkJoin, Observable, of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
+
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { SocialMediaCount } from 'src/app/models/social-media-count.model';
 import { SocialPlatforms } from 'src/app/models/social-platforms.model';

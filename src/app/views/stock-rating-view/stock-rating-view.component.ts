@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { StockSearchResult } from 'src/app/models/stock-search-results.model';
