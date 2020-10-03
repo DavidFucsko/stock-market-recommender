@@ -1,4 +1,8 @@
 <ng-container *ngIf="!!stockSearchResults">
+  <h2>
+    Stock Rating for: {{ stockSearchResults.stockName }} based on
+    {{ stockSearchResults.algorithm }} algorithm
+  </h2>
   <table width="90%" class="stock-results">
     <tr class="data-row">
       <th>Price</th>

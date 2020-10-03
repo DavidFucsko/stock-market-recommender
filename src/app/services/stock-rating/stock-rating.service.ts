@@ -81,6 +81,8 @@ export class StockRatingService {
         combinedResults.stockPrices = combinedStockPrices;
         combinedResults.dayOfTrades = combinedDayOfTrades;
         combinedResults.socialMediaCounts = result.socialMediaCounts;
+        combinedResults.algorithm = searchParameters.algorithmToUse;
+        combinedResults.stockName = searchParameters.stockSymbol;
         this.latestCombinedSearchResults = combinedResults;
         return combinedResults;
       }),

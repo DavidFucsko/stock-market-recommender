@@ -5,6 +5,16 @@ input {
     font-family: arial, sans-serif-light, sans-serif;
 }
 
+table {
+    color: $dark-grey;
+}
+
+h2 {
+    font-size: $normal-font;
+    margin-bottom: 1rem;
+    color: $dark-grey;
+}
+
 .tab-label {
     font-size: $small-font;
     text-transform: uppercase;
@@ -22,9 +32,8 @@ input {
     input,
     p {
         font-size: $small-font;
-        color: $dark-grey
+        color: $dark-grey;
     }
-
 }
 
 nav {
