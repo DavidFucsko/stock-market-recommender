@@ -1,1 +1,22 @@
-<p>social-media-posts works!</p>
+<div class="search-social-media">
+  <form
+    [formGroup]="socialMediaSearchForm"
+    (ngSubmit)="socialMediaSearchSubmit()"
+    class="form"
+  >
+    <input type="number" formControlName="numberOfPosts" />
+    <button type="submit">Search Posts</button>
+  </form>
+</div>
+<ng-container *ngIf="!!socialMediaPosts">
+  <div class="social-media-posts">
+    <ng-container *ngFor="let post of socialMediaPosts">
+      <app-data-card>
+        <p class="social-media-posts__title">{{ post.title }}</p>
+        <div class="social-media-posts__content">
+          <p>{{ post.post }}</p>
+        </div>
+      </app-data-card>
+    </ng-container>
+  </div>
+</ng-container>

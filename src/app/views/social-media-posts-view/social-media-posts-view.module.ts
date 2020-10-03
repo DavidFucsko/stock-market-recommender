@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { SocialMediaPostsViewComponent } from './social-media-posts-view.component';
 import { SocialMediaPostsComponent } from '../../components/social-media-posts/social-media-posts.component';
+import { SharedComponentsModule } from 'src/app/components/shared/shared-components.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SocialMediaPostsViewComponent, SocialMediaPostsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedComponentsModule,
+    ReactiveFormsModule
   ],
   exports: [SocialMediaPostsViewComponent]
 })

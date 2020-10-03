@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { CountByType } from '../models/count-by-type.model';
 import { SocialMediaCount } from '../models/social-media-count.model';
+import { SocialMediaPost } from '../models/social-media-post.model';
 import { StockPriceModel } from '../models/stock-price.model';
 
 
@@ -58,6 +59,27 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
                             algorithmToUse,
                             additionalParams
                         ), status: 200
+                    }));
+                }
+            case ('twitter'):
+                {
+                    const numberOfPosts = request.params.get('numberOfPosts');
+                    return of(new HttpResponse({
+                        body: this.getSocialMediaPosts(numberOfPosts, request.url.split(environment.backendUrl)[1])
+                    }));
+                }
+            case ('facebook'):
+                {
+                    const numberOfPosts = request.params.get('numberOfPosts');
+                    return of(new HttpResponse({
+                        body: this.getSocialMediaPosts(numberOfPosts, request.url.split(environment.backendUrl)[1])
+                    }));
+                }
+            case ('instagram'):
+                {
+                    const numberOfPosts = request.params.get('numberOfPosts');
+                    return of(new HttpResponse({
+                        body: this.getSocialMediaPosts(numberOfPosts, request.url.split(environment.backendUrl)[1])
                     }));
                 }
             default:
@@ -112,6 +134,18 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
             return this.algorithmMap.get(algorithmToUse).call(this, stockPrice, socialMediaCounts[index], additionalParams[index]);
         });
         return result;
+    }
+
+    getSocialMediaPosts(numberOfPosts: string, platform: string): SocialMediaPost[] {
+        const response: SocialMediaPost[] = [];
+        console.log(parseInt(numberOfPosts, 10));
+        for (let i = 0; i < parseInt(numberOfPosts, 10); i++) {
+            response.push({
+                title: `${platform.toUpperCase()} post title`,
+                post: 'Lorem ipsum post body text!'
+            });
+        }
+        return response;
     }
 
     private naiveAlgorithm(stockPrice: number, socialMediaCount: number): number {

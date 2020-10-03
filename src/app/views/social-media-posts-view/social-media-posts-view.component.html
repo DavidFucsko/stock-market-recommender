@@ -1,2 +1,4 @@
-<p>social-media-posts view works!</p>
-<app-social-media-posts></app-social-media-posts>
+<app-social-media-posts
+  [socialMediaPosts]="socialMediaPosts$ | async"
+  (searchSocialMedia)="searchSocialMedia($event)"
+></app-social-media-posts>
