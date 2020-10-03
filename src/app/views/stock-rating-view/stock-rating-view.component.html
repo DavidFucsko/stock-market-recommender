@@ -1,3 +1,11 @@
-<app-stock-selector (selectedStock)="searchStock($event)" (socialSelectorChanged)="socialSelectorChanged($event)">
+<app-stock-selector
+  (selectedStock)="searchStock($event)"
+  (socialSelectorChanged)="socialSelectorChanged($event)"
+>
 </app-stock-selector>
-<app-stock-rating-results [stockSearchResults]="stockSearchResults$ | async"></app-stock-rating-results>
+<app-stock-rating-results
+  [stockSearchResults]="stockSearchResults$ | async"
+></app-stock-rating-results>
+<app-chart-component
+  [stockSearchResults]="stockSearchResults$ | async"
+></app-chart-component>

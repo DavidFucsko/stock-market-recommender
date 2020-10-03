@@ -9,11 +9,17 @@ import { SharedComponentsModule } from '../../components/shared/shared-component
 import { AlgorithmPickerComponent } from 'src/app/components/stock-rating/algorithm-picker/algorithm-picker.component';
 import { DirectivesModule } from 'src/app/directives/directives.module';
 import { SharedPipesModule } from 'src/app/pipes/shared-pipes.module';
+import { ChartComponent } from 'src/app/components/chart-component/chart-component.component';
 
 
 
 @NgModule({
-  declarations: [StockRatingViewComponent, StockRatingResultsComponent, StockSelectorComponent, AlgorithmPickerComponent],
+  declarations: [
+    StockRatingViewComponent,
+    StockRatingResultsComponent,
+    StockSelectorComponent,
+    AlgorithmPickerComponent,
+    ChartComponent],
   imports: [
     CommonModule,
     SharedComponentsModule,
