@@ -1,0 +1,13 @@
+@import 'variables';
+
+.data-row--first {
+    .data-row {
+        border-top: 1px solid $grey;
+    }
+}
+
+.data-row--last {
+    .data-row {
+        border-radius: 0.2rem;
+    }
+}

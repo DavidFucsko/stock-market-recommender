@@ -3,13 +3,12 @@
 .tab-label {
     display: inline-block;
     cursor: pointer;
-    padding: 0 1rem;
+    padding-right: 1rem;
     border-bottom: .1rem solid $grey;
     margin-bottom: 1.5rem;
 
     &:hover,
     &.tab-label--active {
-        box-shadow: 0 4px 2px -2px $light-grey;
         color: $secondary-color
     }
 }

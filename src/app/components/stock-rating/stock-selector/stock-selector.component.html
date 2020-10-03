@@ -21,31 +21,33 @@
                 id="toDate"
                 formControlName="toDate">
         </label>
-        <label>
-            Facebook:
-            <input
-                type="checkbox"
-                id="facebook"
-                formControlName="facebook" (change)="socialMediaFilterChanged()">
-        </label>
-        <label>
-            Twitter:
-            <input
-                type="checkbox"
-                id="twitter"
-                formControlName="twitter" (change)="socialMediaFilterChanged()">
-        </label>
-        <label>
-            Instagram:
-            <input
-                type="checkbox"
-                id="instagram"
-                formControlName="instagram" (change)="socialMediaFilterChanged()">
-        </label>
+        <div class="social-checkboxs">
+            <label class="checkbox-label">
+                Facebook:
+                <input
+                    type="checkbox"
+                    id="facebook"
+                    formControlName="facebook" (change)="socialMediaFilterChanged()">
+            </label>
+            <label class="checkbox-label">
+                Twitter:
+                <input
+                    type="checkbox"
+                    id="twitter"
+                    formControlName="twitter" (change)="socialMediaFilterChanged()">
+            </label>
+            <label class="checkbox-label">
+                Instagram:
+                <input
+                    type="checkbox"
+                    id="instagram"
+                    formControlName="instagram" (change)="socialMediaFilterChanged()">
+            </label>
+        </div>
+        <app-algorithm-picker (algorithmChanged)="algorithmChanged($event)">
+        </app-algorithm-picker>
         <div class="form-buttons">
             <button type="submit">Search</button>
         </div>
     </form>
-    <app-algorithm-picker (algorithmChanged)="algorithmChanged($event)">
-    </app-algorithm-picker>
 </div>

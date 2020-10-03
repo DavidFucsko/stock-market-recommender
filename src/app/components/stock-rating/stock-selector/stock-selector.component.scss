@@ -3,9 +3,19 @@
 
 input {
     display: block;
-    border: none;
-    border-bottom: 1px solid $light-grey;
-    width: 50%;
+}
+
+.social-checkboxs {
+    margin-bottom: 2rem;
+
+    input {
+        display: inline;
+        width: 2%;
+    }
+
+    .checkbox-label {
+        display: inline;
+    }
 }
 
 label {

@@ -19,7 +19,8 @@ input {
     }
 
     label,
-    input {
+    input,
+    p {
         font-size: $small-font;
         color: $dark-grey
     }

@@ -75,7 +75,7 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
         const response: StockPriceModel[] = [];
         const dayOfTrade = fromDate;
         while (dayOfTrade.getTime() < toDate.getTime()) {
-            response.push({ stockSymbol, price: (Math.random() * 1001), dayOfTrade });
+            response.push({ stockSymbol, price: Math.floor((Math.random() * 1001)), dayOfTrade });
             dayOfTrade.setDate(dayOfTrade.getDate() + 1);
         }
         return response;
@@ -88,15 +88,15 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
             const socialMediaCountsForDay: CountByType[] = [
                 {
                     mediaType: 'facebook',
-                    count: (Math.random() * 10001)
+                    count: Math.floor((Math.random() * 10001))
                 },
                 {
                     mediaType: 'twitter',
-                    count: (Math.random() * 10001)
+                    count: Math.floor((Math.random() * 10001))
                 },
                 {
                     mediaType: 'instagram',
-                    count: (Math.random() * 10001)
+                    count: Math.floor((Math.random() * 10001))
                 }
             ];
             response.push({ stockSymbol, socialMediaCounts: socialMediaCountsForDay, dayOfTrade });
