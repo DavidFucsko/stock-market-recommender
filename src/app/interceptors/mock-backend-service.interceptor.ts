@@ -95,9 +95,9 @@ export class MockBackendServiceInterceptor implements HttpInterceptor {
 
     stockPriceGenerator(stockSymbol: string, fromDate: Date, toDate: Date): StockPriceModel[] {
         const response: StockPriceModel[] = [];
-        const dayOfTrade = fromDate;
+        const dayOfTrade = new Date(fromDate);
         while (dayOfTrade.getTime() < toDate.getTime()) {
-            response.push({ stockSymbol, price: Math.floor((Math.random() * 1001)), dayOfTrade });
+            response.push({ stockSymbol, price: Math.floor((Math.random() * 1001)), dayOfTrade: new Date(dayOfTrade) });
             dayOfTrade.setDate(dayOfTrade.getDate() + 1);
         }
         return response;
