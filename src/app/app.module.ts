@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MockBackendServiceInterceptor } from './interceptors/mock-backend-service.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RatingPipePipe } from './pipes/rating-pipe.pipe';
 
 @NgModule({
   declarations: [

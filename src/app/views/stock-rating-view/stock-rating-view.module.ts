@@ -7,6 +7,7 @@ import { StockSelectorComponent } from '../../components/stock-rating/stock-sele
 import { SharedComponentsModule } from '../../components/shared/shared-components.module';
 import { AlgorithmPickerComponent } from 'src/app/components/stock-rating/algorithm-picker/algorithm-picker.component';
 import { DirectivesModule } from 'src/app/directives/directives.module';
+import { SharedPipesModule } from 'src/app/pipes/shared-pipes.module';
 
 
 
@@ -16,7 +17,8 @@ import { DirectivesModule } from 'src/app/directives/directives.module';
     CommonModule,
     SharedComponentsModule,
     ReactiveFormsModule,
-    DirectivesModule
+    DirectivesModule,
+    SharedPipesModule
   ],
   exports: [StockRatingViewComponent]
 })

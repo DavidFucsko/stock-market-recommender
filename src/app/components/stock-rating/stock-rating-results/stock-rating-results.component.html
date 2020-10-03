@@ -1,17 +1,28 @@
 <ng-container *ngIf="!!stockSearchResults">
-    <app-data-display>
-        <span>Price</span>
-        <span>Day of Trade</span>
-        <span> Social count</span>
-        <span>Stock Rating</span>
-    </app-data-display>
+  <table width="90%" class="stock-results">
+    <tr class="data-row">
+      <th>Price</th>
+      <th>Day of Trade</th>
+      <th>Social count</th>
+      <th>Stock Rating</th>
+    </tr>
     <ng-container
-        *ngFor="let stockPrice of stockSearchResults.stockPrices; let i = index; let last = last; let first = first">
-        <app-data-display [ngClass]="{'data-row--last': last,'data-row--first': first }">
-            <span>{{stockPrice}}</span>
-            <span>{{stockSearchResults.dayOfTrades[i] | date}}</span>
-            <span>{{stockSearchResults.cumulatedSocialMediaCounts[i]}}</span>
-            <span>{{stockSearchResults.stockRatings[i]}}</span>
-        </app-data-display>
+      *ngFor="
+        let stockPrice of stockSearchResults.stockPrices;
+        let i = index;
+        let last = last;
+        let first = first
+      "
+    >
+      <tr
+        class="data-row"
+        [ngClass]="{ 'data-row--last': last, 'data-row--first': first }"
+      >
+        <td>{{ stockPrice }}</td>
+        <td>{{ stockSearchResults.dayOfTrades[i] | date }}</td>
+        <td>{{ stockSearchResults.cumulatedSocialMediaCounts[i] }}</td>
+        <td>{{ stockSearchResults.stockRatings[i] | ratingPipe }}</td>
+      </tr>
     </ng-container>
+  </table>
 </ng-container>

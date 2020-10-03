@@ -1,13 +1,28 @@
-@import 'variables';
+@import "variables";
+.stock-results {
+    margin: 0 auto;
+}
 
 .data-row--first {
-    .data-row {
-        border-top: 1px solid $grey;
+    td {
+        border-top: 0.1rem solid $light-grey;
     }
 }
 
 .data-row--last {
-    .data-row {
+    td {
         border-radius: 0.2rem;
+    }
+}
+
+.data-row {
+    box-shadow: -1px 5px 5px 0px $grey;
+    border-radius: 0.2rem;
+    background-color: $white;
+    line-height: 4rem;
+
+    td {
+        text-align: center;
+        vertical-align: middle;
     }
 }

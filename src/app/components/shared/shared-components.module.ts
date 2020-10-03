@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TabsComponent } from './tabs/tabs.component';
-import { DataDisplayComponent } from './data-display/data-display.component';
+import { DataCardComponent } from './data-card/data-card.component';
 
 
 
 @NgModule({
-  declarations: [TabsComponent, DataDisplayComponent],
+  declarations: [TabsComponent, DataCardComponent],
   imports: [
     CommonModule
   ],
-  exports: [TabsComponent, DataDisplayComponent]
+  exports: [TabsComponent, DataCardComponent]
 })
 export class SharedComponentsModule { }

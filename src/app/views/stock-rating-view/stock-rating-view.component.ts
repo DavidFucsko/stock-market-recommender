@@ -5,6 +5,7 @@ import { tap } from 'rxjs/operators';
 
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
 import { StockSearchResult } from 'src/app/models/stock-search-results.model';
+import { SocialMediaInfoService } from 'src/app/services/common/social-media-info.service';
 import { StockRatingService } from 'src/app/services/stock-rating/stock-rating.service';
 
 @Component({
@@ -16,16 +17,17 @@ export class StockRatingViewComponent implements OnInit {
 
   stockSearchResults$: Observable<StockSearchResult>;
 
-  constructor(private stockRatingService: StockRatingService) { }
+  constructor(private stockRatingService: StockRatingService, private socialMediaInfoService: SocialMediaInfoService) { }
 
   ngOnInit(): void {
   }
 
   searchStock(searchParameters: SearchStockParamters): void {
-    this.stockSearchResults$ = this.stockRatingService.searchStock(searchParameters).pipe(tap(console.log));
+    this.stockSearchResults$ = this.stockRatingService.searchStock(searchParameters);
   }
 
   socialSelectorChanged(changes: SearchStockParamters): void {
-    this.stockSearchResults$ = this.stockRatingService.runRecommendationAlgorithm(changes).pipe(tap(console.log));
+    this.stockSearchResults$ = this.stockRatingService.runRecommendationAlgorithm(changes);
+    this.socialMediaInfoService.socialSelectorsChanged(changes);
   }
 }

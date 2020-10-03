@@ -63,14 +63,7 @@ import { SocialPlatforms } from 'src/app/models/social-platforms.model';
       facebook: this.stockSelectorForm.get('facebook').value,
       twitter: this.stockSelectorForm.get('twitter').value,
       instagram: this.stockSelectorForm.get('instagram').value,
-    }
-    console.log(
-      {
-        facebook: this.stockSelectorForm.get('facebook').value,
-        twitter: this.stockSelectorForm.get('twitter').value,
-        instagram: this.stockSelectorForm.get('instagram').value,
-      }
-    );
+    };
 
     this.searchParameters = { ...this.searchParameters, ...changes }
 
