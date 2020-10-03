@@ -7,8 +7,8 @@ import { DirectivesModule } from 'src/app/directives/directives.module';
 @Component({
   selector: 'app-test-cmp',
   template: `<app-tabs>
-      <div *appTabMarker="'Test1'"></div>
-      <div *appTabMarker="'Test2'"></div>
+      <div *appTabMarker="{markerName: 'Test1', referenceName: 'test1'}"></div>
+      <div *appTabMarker="{markerName: 'Test2', referenceName: 'test2'}"></div>
 </app-tabs>`,
 })
 class TestWrapperComponent { }
@@ -36,9 +36,11 @@ describe('TabViewComponent', () => {
     expect(component.templates.length).toEqual(2);
   });
 
-  it('should select the first tab by default', () => {
-    const nativeElement = fixture.nativeElement;
-    const tabLabel = nativeElement.querySelector('.tab-label--active');
-    expect(tabLabel.textContent.trim()).toEqual('Test1');
+  describe('run only', () => {
+    it('should select the first tab by default', () => {
+      const nativeElement = fixture.nativeElement;
+      const tabLabel = nativeElement.querySelector('.tab-label--active');
+      expect(tabLabel.textContent.trim()).toEqual('Test1');
+    });
   });
 });

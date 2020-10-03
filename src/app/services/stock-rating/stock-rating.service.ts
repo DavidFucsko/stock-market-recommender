@@ -14,7 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class StockRatingService {
 
-  private latestCombinedSearchResults: StockSearchResult;
+  public latestCombinedSearchResults: StockSearchResult;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -57,7 +57,8 @@ export class StockRatingService {
 
     const body = { stockPrices, socialMediaCounts, algorithmToUse, additionalParams };
 
-    return this.httpClient.post<number[]>(`${environment.backendUrl}${environment.backendEndpoints[2]}`, body);
+    return this.httpClient.post<number[]>(`${environment.backendUrl}${environment.backendEndpoints[2]}`, body)
+      .pipe(catchError(_ => of([])));
   }
 
   searchStock(searchParameters: SearchStockParamters): Observable<StockSearchResult> {
@@ -85,7 +86,9 @@ export class StockRatingService {
         combinedResults => this.recommendationAlgorithm(
           combinedResults.stockPrices,
           combinedResults.cumulatedSocialMediaCounts, searchParameters.algorithmToUse, searchParameters.additionalParams).pipe(
-            map(response => ({ ...combinedResults, ...{ stockRatings: response } })))),
+            map(response => ({ ...combinedResults, ...{ stockRatings: response } })))
+      ),
+      catchError(_ => of(new StockSearchResult()))
     );
   }
 

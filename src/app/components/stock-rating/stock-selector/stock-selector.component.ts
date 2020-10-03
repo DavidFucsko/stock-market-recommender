@@ -10,7 +10,6 @@ import {
   FormGroup
 } from '@angular/forms';
 import { SearchStockParamters } from 'src/app/models/search-stock-parameters.model';
-import { SocialPlatforms } from 'src/app/models/social-platforms.model';
 
 @Component({
   selector: 'app-stock-selector',
@@ -65,7 +64,7 @@ import { SocialPlatforms } from 'src/app/models/social-platforms.model';
       instagram: this.stockSelectorForm.get('instagram').value,
     };
 
-    this.searchParameters = { ...this.searchParameters, ...changes }
+    this.searchParameters = { ...this.searchParameters, ...changes };
 
     this.socialSelectorChanged.emit(this.searchParameters);
   }

@@ -7,4 +7,15 @@ export class SearchStockParamters {
     instagram: boolean;
     additionalParams: any[];
     algorithmToUse: string;
+
+    constructor() {
+        this.stockSymbol = '';
+        this.fromDate = new Date().toISOString().substring(0, 10);
+        this.toDate = new Date().toISOString().substring(0, 10);
+        this.facebook = true;
+        this.twitter = true;
+        this.instagram = true;
+        this.additionalParams = [];
+        this.algorithmToUse = 'naive';
+    }
 }

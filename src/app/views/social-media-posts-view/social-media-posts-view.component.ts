@@ -19,11 +19,11 @@ export class SocialMediaPostsViewComponent implements OnInit {
   }
 
   searchSocialMedia(numberOfPosts: string): void {
-    this.getSocialMediaPosts(numberOfPosts, 'twitter');
+    this.getSocialMediaPosts(numberOfPosts);
   }
 
-  getSocialMediaPosts(numberOfPosts: string, type: string): void {
-    this.socialMediaPosts$ = this.socialMediaInfoService.getSocialMediaPosts(type, numberOfPosts);
+  getSocialMediaPosts(numberOfPosts: string): void {
+    this.socialMediaPosts$ = this.socialMediaInfoService.getSocialMediaPosts(numberOfPosts);
   }
 
 }

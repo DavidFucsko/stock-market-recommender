@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { StockSearchResult } from 'src/app/models/stock-search-results.model';
 
 @Component({
@@ -6,14 +6,10 @@ import { StockSearchResult } from 'src/app/models/stock-search-results.model';
   templateUrl: './stock-rating-results.component.html',
   styleUrls: ['./stock-rating-results.component.scss']
 })
-export class StockRatingResultsComponent implements OnInit {
+export class StockRatingResultsComponent {
 
   @Input()
   stockSearchResults: StockSearchResult;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

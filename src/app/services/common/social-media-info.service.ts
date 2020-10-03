@@ -11,11 +11,11 @@ import { environment } from 'src/environments/environment';
 })
 export class SocialMediaInfoService {
 
-  private selectedSocialMediaPlatforms = { twitter: true, facebook: true, instagram: true };
+  public selectedSocialMediaPlatforms = { twitter: true, facebook: true, instagram: true };
 
   constructor(private httpClient: HttpClient) { }
 
-  getSocialMediaPosts(type: string, numberOfPosts: string): Observable<SocialMediaPost[]> {
+  getSocialMediaPosts(numberOfPosts: string): Observable<SocialMediaPost[]> {
     let socialParams = new HttpParams();
     socialParams = socialParams.append(
       'numberOfPosts', numberOfPosts);
@@ -33,7 +33,7 @@ export class SocialMediaInfoService {
       let posts = [];
       Object.keys(result).forEach(key => posts = [...posts, ...result[key]]);
       return posts;
-    }), tap(console.log));
+    }), catchError(_ => of([])));
   }
 
   socialSelectorsChanged(changes: SearchStockParamters): void {
